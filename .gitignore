@@ -1,0 +1,9 @@
+# Assessment output - may contain credential material and cardholder data.
+Amrs Output/
+Run_*/
+*.log
+findings.json
+findings.csv
+Radmin-hashes.txt
+Radmin-Registry.reg
+blobs/
