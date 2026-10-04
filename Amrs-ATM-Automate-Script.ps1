@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Amr's ATM Automate Script - v2.0
+    Amr's ATM Assessment - v2.0
     NCR Personas / APTRA ATM security assessment automation (Windows).
 
 .DESCRIPTION
@@ -497,7 +497,7 @@ function Invoke-Phase {
 $header = @"
 ###############################################################
 #                                                             #
-#   Amr's ATM Automate Script  v2.0                           #
+#   Amr's ATM Assessment  v2.0                                #
 #   NCR Personas / APTRA security assessment                  #
 #                                                             #
 #   Date      : $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
@@ -1321,7 +1321,7 @@ Invoke-Phase 7 'RADMIN SERVER HASH EXTRACTION' {
         if (-not (Test-Path $tmp)) { Write-Log "  [skip] $exportPath (absent or access denied)" 'VERBOSE'; continue }
         $content = Get-Content $tmp -Raw -ErrorAction SilentlyContinue
         if (-not $regHeaderWritten) {
-            Set-Content -Path $RadminReg -Value "Windows Registry Editor Version 5.00`r`n; Amr's ATM Automate Script - Radmin export`r`n; host=$env:COMPUTERNAME date=$(Get-Date -Format 's')`r`n" -Encoding ASCII
+            Set-Content -Path $RadminReg -Value "Windows Registry Editor Version 5.00`r`n; Amr's ATM Assessment - Radmin export`r`n; host=$env:COMPUTERNAME date=$(Get-Date -Format 's')`r`n" -Encoding ASCII
             $regHeaderWritten = $true
         }
         Add-Content -Path $RadminReg -Value ($content -replace 'Windows Registry Editor Version 5\.00\r?\n', '') -Encoding Unicode
@@ -2786,7 +2786,7 @@ if ($script:Findings.Count -gt 0) {
 try {
     if (Test-Cmd 'ConvertTo-Json') {
         $payload = [pscustomobject]@{
-            tool        = "Amr's ATM Automate Script"
+            tool        = "Amr's ATM Assessment"
             version     = '2.0'
             host        = $env:COMPUTERNAME
             os          = "$((Get-OsInfo).Caption) $((Get-OsInfo).Version)"
