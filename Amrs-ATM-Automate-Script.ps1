@@ -497,7 +497,7 @@ function Invoke-Phase {
 $header = @"
 ###############################################################
 #                                                             #
-#   Amr's ATM Assessment  v2.0                           #
+#   Amr's ATM Assessment  v2.0                                #
 #   NCR Personas / APTRA security assessment                  #
 #                                                             #
 #   Date      : $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
