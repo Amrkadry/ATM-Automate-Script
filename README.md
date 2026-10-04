@@ -1,4 +1,4 @@
-# Amr's ATM Automate Script
+# Amr's ATM Assessment
 
 Offline, single-file PowerShell collector for **authorised** security assessments of
 Windows-based ATMs — NCR Personas / APTRA in particular, but most checks apply to any
