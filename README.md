@@ -11,7 +11,7 @@ machine-readable findings file, and the evidence you need to write the report.
 and never changes system configuration.
 
 ```powershell
-.\Amrs-ATM-Automate-Script.ps1
+.\Amrs-ATM-Assessment.ps1
 ```
 
 ---
@@ -54,16 +54,16 @@ Everything else supports these:
 
 ```powershell
 # Full assessment, secrets masked
-.\Amrs-ATM-Automate-Script.ps1
+.\Amrs-ATM-Assessment.ps1
 
 # Radmin + XFS only, in 32-bit PowerShell so msxfs.dll actually loads
-.\Amrs-ATM-Automate-Script.ps1 -Phases 7,8,9 -Relaunch32
+.\Amrs-ATM-Assessment.ps1 -Phases 7,8,9 -Relaunch32
 
 # What a kiosk-level attacker sees, no admin needed
-.\Amrs-ATM-Automate-Script.ps1 -AllowNonAdmin -Phases 11,12
+.\Amrs-ATM-Assessment.ps1 -AllowNonAdmin -Phases 11,12
 
 # In-service terminal: never touch the device layer, skip the slow disk walks
-.\Amrs-ATM-Automate-Script.ps1 -SkipXfsApi -Fast
+.\Amrs-ATM-Assessment.ps1 -SkipXfsApi -Fast
 ```
 
 ### Parameters

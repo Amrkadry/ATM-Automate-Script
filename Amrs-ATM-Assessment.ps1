@@ -57,15 +57,15 @@
     kiosk-level or terminal-user attacker can actually reach.
 
 .EXAMPLE
-    .\Amrs-ATM-Automate-Script.ps1
+    .\Amrs-ATM-Assessment.ps1
     Full assessment, secrets masked, results under '.\Amrs Output\Run_<ts>'.
 
 .EXAMPLE
-    .\Amrs-ATM-Automate-Script.ps1 -Phases 7,8,9 -Relaunch32
+    .\Amrs-ATM-Assessment.ps1 -Phases 7,8,9 -Relaunch32
     Radmin + XFS only, re-executed in 32-bit PowerShell so msxfs.dll loads.
 
 .EXAMPLE
-    .\Amrs-ATM-Automate-Script.ps1 -AllowNonAdmin -Phases 11,12
+    .\Amrs-ATM-Assessment.ps1 -AllowNonAdmin -Phases 11,12
     What a kiosk-level attacker sees: lockdown posture and privesc surface.
 
 .NOTES
